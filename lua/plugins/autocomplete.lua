@@ -23,6 +23,7 @@ return { -- Autocompletion
     'saadparwaiz1/cmp_luasnip',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-path',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
   },
   config = function()
     local cmp = require 'cmp'
@@ -49,8 +50,8 @@ return { -- Autocompletion
 
         -- Timmy keybinds
         ['<CR>'] = cmp.mapping.confirm { select = true },
-        ['<Tab>'] = cmp.mapping.select_next_item(),
-        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+        -- ['<Tab>'] = cmp.mapping.select_next_item(),
+        -- ['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
         -- Manually trigger a completion from nvim-cmp.
         ['<C-Space>'] = cmp.mapping.complete {},
@@ -76,6 +77,7 @@ return { -- Autocompletion
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
+        { name = 'cmp-nvim-lsp-signature-help' },
       },
     }
   end,
